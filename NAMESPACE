@@ -1,1 +1,8 @@
+export(PCodeClassSummary)
+export(filterBlanks)
+export(filterGLRIData)
+export(filterWideDF)
 export(getGLRIData)
+export(statClassSummary)
+export(sumValuesToUse)
+export(wideGLRIData)

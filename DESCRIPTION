@@ -15,6 +15,13 @@ Copyright: This software is in the public domain because it contains materials
 Collate:
     'GLRI_TCL.R'
     'getGLRIData.R'
+    'filterGLRIData.R'
+    'wideGLRIData.R'
+    'statClassSummary.R'
+    'PCodeClassSummary.R'
+    'filterBlanks.R'
+    'filterWideDF.R'
+    'sumValuesToUse.R'
 Depends:
     R (>= 3.0.0)
 Suggests:
