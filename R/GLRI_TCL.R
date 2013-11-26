@@ -36,13 +36,6 @@ NULL
 #' @docType data
 #' @keywords parameter code
 NULL
-#' Parameter code information for OWCs included in GLRItcl
-#'
-#' Group names, parameter codes, remark_cd information, and class.
-#' @name pcode_groups
-#' @docType data
-#' @keywords parameter code
-NULL
 #' Results from station search included in GLRItcl, updated Oct. 25, 2013. Some new sites added, as well as approximate land use information.
 #'
 #' Raw data pulled from NWIS
