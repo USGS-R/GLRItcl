@@ -119,32 +119,17 @@ There are many options for running and editing R code, one nice environment to l
 At any time, you can get information about any function in R by typing a question mark before the functions name.  This will open a file (in RStudio, in the Help window) that describes the function, the required arguments, and provides working examples.
 
 <<helpFunc,eval = FALSE>>=
-?getGLRIData
+# ?getGLRIData
 @
 
 To see the raw code for a particular code, type the name of the function:
 <<rawFunc,eval = TRUE>>=
-getGLRIData
+# getGLRIData
 @
 
 
 \clearpage
 
-%------------------------------------------------------------
-% BIBLIO
-%------------------------------------------------------------
-\begin{thebibliography}{10}
-
-\bibitem{HirschI}
-Helsel, D.R. and R. M. Hirsch, 2002. Statistical Methods in Water Resources Techniques of Water Resources Investigations, Book 4, chapter A3. U.S. Geological Survey. 522 pages. \url{http://pubs.usgs.gov/twri/twri4a3/}
-
-\bibitem{HirschII}
-Hirsch, R. M., Moyer, D. L. and Archfield, S. A. (2010), Weighted Regressions on Time, Discharge, and Season (WRTDS), with an Application to Chesapeake Bay River Inputs. JAWRA Journal of the American Water Resources Association, 46: 857-880. doi: 10.1111/j.1752-1688.2010.00482.x \url{http://onlinelibrary.wiley.com/doi/10.1111/j.1752-1688.2010.00482.x/full}
-
-\bibitem{HirschIII}
-Sprague, L. A., Hirsch, R. M., and Aulenbach, B. T. (2011), Nitrate in the Mississippi River and Its Tributaries, 1980 to 2008: Are We Making Progress? Environmental Science \& Technology, 45 (17): 7209-7216. doi: 10.1021/es201221s \url{http://pubs.acs.org/doi/abs/10.1021/es201221s}
-
-\end{thebibliography}
 
 \end{document}
 

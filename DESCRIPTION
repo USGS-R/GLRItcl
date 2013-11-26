@@ -13,34 +13,9 @@ Copyright: This software is in the public domain because it contains materials
     official USGS copyright policy at
     http://www.usgs.gov/visual-id/credit_usgs.html#copyright
 Collate:
-    'getIndividualGLRIData.R'
-    'getGLRIData.R'
     'GLRI_TCL.R'
-    'filterGLRIData.R'
-    'updatePCodeINFO.R'
-    'statSummary.R'
-    'getStationINFO.R'
-    'createBubbleGraph.R'
-    'getParameterInfo.r'
-    'wideGLRIData.R'
-    'filterWideDF.R'
-    'sumValuesToUse.R'
-    'PCodeClassSummary.R'
-    'statClassSummary.R'
-    'filterOpticalWideData.R'
-    'filterBacteriaData.R'
-    'cleanSampleID.R'
-    'filterVirusData.R'
-    'cleanColNames.R'
-    'addEmptyQual.R'
-    'getSampleID.R'
-    'statBactSummary.R'
-    'filterBlanks.R'
-    'plotBoxPlotSets.R'
-    'customFilledContour.R'
-    'plotBoxPlotSets_withLines.R'
 Depends:
-    R (>= 2.15.0)
+    R (>= 3.0.0)
 Suggests:
     knitr
 LazyLoad: yes
