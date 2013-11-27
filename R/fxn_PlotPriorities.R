@@ -35,11 +35,8 @@
 #' concThresh <- 200
 #' plotTitle <- paste("Trace Organics Water Sample Results:",parm)
 #' ylab <- "Concentration (ug/L)"
-#' subsetVar <- NA
-#' subsetValue <- ""
 #' logy <- TRUE
 #' addY <- "min10"
-
 PlotPriorities(dataByClass,parm,xLabelParm,statParm,countThresh,concThresh,plotTitle,ylab,subsetVar,subsetValue,logy=TRUE,addY=addY)
 
 PlotPriorities <- function(df,parm,xLabelParm,statParm,countThresh,concThresh,plotTitle,ylab,subsetVar=NA,subsetValue=NA,logy=FALSE,addY=0){
