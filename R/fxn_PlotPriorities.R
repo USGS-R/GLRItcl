@@ -31,15 +31,17 @@
 #' parm <- "sumOfValues_HERBICIDE"
 #' xLabelParm <- "site"
 #' statParm <- "mean"
+#' subsetVar <- FALSE
+#' subsetValue <- ""
 #' countThresh <- 4
 #' concThresh <- 200
 #' plotTitle <- paste("Trace Organics Water Sample Results:",parm)
 #' ylab <- "Concentration (ug/L)"
 #' logy <- TRUE
 #' addY <- "min10"
-PlotPriorities(dataByClass,parm,xLabelParm,statParm,countThresh,concThresh,plotTitle,ylab,subsetVar,subsetValue,logy=TRUE,addY=addY)
+#' PlotPriorities(dataByClass,parm,xLabelParm,statParm,countThresh,concThresh,plotTitle,ylab,subsetVar,subsetValue,logy=TRUE,addY=addY)
 
-PlotPriorities <- function(df,parm,xLabelParm,statParm,countThresh,concThresh,plotTitle,ylab,subsetVar=NA,subsetValue=NA,logy=FALSE,addY=0){
+PlotPriorities <- function(df,parm,xLabelParm,statParm,countThresh,concThresh,plotTitle,ylab,subsetVar=FALSE,subsetValue=NA,logy=FALSE,addY=0){
   options(scipen=10) #avoid scientific notation for y axis
   
   ############################
@@ -59,8 +61,8 @@ PlotPriorities <- function(df,parm,xLabelParm,statParm,countThresh,concThresh,pl
   
   # End function definitions
   ##########################
-  logyCh <- ifelse(logy,"y","") 
-  if(!is.na(subsetVar)) df <- subset(df,df[,subsetVar]==subsetValue)
+  logyCh <- ifelse(logy,"y","")
+  if(subsetVar!=FALSE) df <- subset(df,df[,subsetVar]==subsetValue)
   if(addY=="min10") addY <- min(df[which(df[,parm]>0),parm])/10
   if(min(df[,parm],na.rm=TRUE)==0){
   df[which(df[,parm]==0),parm] <- addY

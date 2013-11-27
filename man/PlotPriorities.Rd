@@ -4,7 +4,7 @@
 \usage{
   PlotPriorities(df, parm, xLabelParm, statParm,
     countThresh, concThresh, plotTitle, ylab,
-    subsetVar = NA, subsetValue = NA, logy = FALSE,
+    subsetVar = FALSE, subsetValue = NA, logy = FALSE,
     addY = 0)
 }
 \arguments{
@@ -53,7 +53,28 @@
   data points per site and then by the mean for each site.
 }
 \examples{
-x<-1
+genericCensoringValue <- function(qualifier,value, detectionLimit){
+   valueToUse <- ifelse("<" == qualifier, detectionLimit, value)
+   return(valueToUse)
+}
+filteredData <- filterGLRIData(QWPortalGLRI,genericCensoringValue)
+wideDF <- wideGLRIData(filteredData)
+keyDF <- pcodeINFO
+classCol <- "class"
+pCodeCol <- "parameter_cd"
+dataByClass <- PCodeClassSummary(wideDF,keyDF,pCodeCol,classCol)
+parm <- "sumOfValues_HERBICIDE"
+xLabelParm <- "site"
+statParm <- "mean"
+subsetVar <- FALSE
+subsetValue <- ""
+countThresh <- 4
+concThresh <- 200
+plotTitle <- paste("Trace Organics Water Sample Results:",parm)
+ylab <- "Concentration (ug/L)"
+logy <- TRUE
+addY <- "min10"
+PlotPriorities(dataByClass,parm,xLabelParm,statParm,countThresh,concThresh,plotTitle,ylab,subsetVar,subsetValue,logy=TRUE,addY=addY)
 }
 \keyword{boxplot}
 \keyword{counts}
