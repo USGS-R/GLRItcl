@@ -24,6 +24,8 @@ Collate:
     'sumValuesToUse.R'
     'createBubbleGraph.R'
     'statSummary.R'
+    'fxn_PlotPriorities.R'
+    'fxn_MapSizeColor.R'
 Depends:
     R (>= 3.0.0)
 Suggests:
