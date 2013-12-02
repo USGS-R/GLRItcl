@@ -31,7 +31,8 @@
 #' @param ytop  Placement of top side of legend box (min longitude)
 #' @keywords map spatial size color
 #' @return NULL
-#' @Imports rgdal
+#' @import rgdal
+#' @import sp
 #' @export
 #' @examples
 #' genericCensoringValue <- function(qualifier,value, detectionLimit){

@@ -28,6 +28,9 @@ Collate:
     'fxn_MapSizeColor.R'
 Depends:
     R (>= 3.0.0)
+Imports:
+    rgdal,
+    sp
 Suggests:
     knitr
 LazyLoad: yes
