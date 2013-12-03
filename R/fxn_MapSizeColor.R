@@ -30,6 +30,8 @@
 #' @param ybottom  Placement of bottom side of legend box (min longitude)
 #' @param ytop  Placement of top side of legend box (min longitude)
 #' @param mainTitle Text to be used as the title of the plot
+#' @param units 1-4 are for water concentration: mg/L, ug/L, ng/L, pg/L respectively.
+#' 5-6 are for sediment concentration: mg/kg, ug/kg, ng/kg, pg/kg respectively.
 #' @keywords map spatial size color
 #' @return NULL
 #' @import rgdal
@@ -71,7 +73,7 @@ MapSizeColor <- function(df,colorVar,sizeVar,latVar,lonVar,
                          politicalBounds,hydroPolygons,hydroLines,
                          xmin,xmax,ymin,ymax,
                          col1="tan",col2="orange3",col3="orangered1",col4="orangered4",
-                         xleft,xright,ytop,ybottom,mainTitle=""){
+                         xleft,xright,ytop,ybottom,mainTitle="",units=2){
 
   #set plot parameters
   par( mar=c(0,0,1,0), new = FALSE,xpd=NA)#,mgp=c(3,0.1,0))
@@ -105,15 +107,25 @@ MapSizeColor <- function(df,colorVar,sizeVar,latVar,lonVar,
                 paste(binThresh[2],"-",binThresh[3]),
                 paste(binThresh[3],"-",round(max(df[,colorVar]),3)))
   legendCol = binCol
-  startText <- c(xleft+0.2,ytop-0.3)
-  text("Size of symbol",x=startText[1],y=startText[2],font=2,pos=4,cex=legendTextCex)
-  text("indicates number",x=startText[1],y=startText[2]-0.3,font=2,pos=4,cex=legendTextCex)
-  text("of samples",x=startText[1],y=startText[2]-0.6,font=2,pos=4,cex=legendTextCex)
+  startText <- c((xleft+xright)/2,ytop-0.3)
+  text("Size of symbol",x=startText[1],y=startText[2],font=2,cex=legendTextCex)
+  text("indicates number",x=startText[1],y=startText[2]-0.3,font=2,cex=legendTextCex)
+  text("of samples",x=startText[1],y=startText[2]-0.6,font=2,cex=legendTextCex)
   
-  startText <- c(xleft+0.2,ytop-2.4)
-  text("Color of symbol",x=startText[1],y=startText[2],font=2,pos=4,cex=legendTextCex)
-  text("indicates",x=startText[1],y=startText[2]-0.3,font=2,pos=4,cex=legendTextCex)
-  text(expression(bold(paste("Concentration (",mu,"g/L)",sep=""))),x=startText[1],y=startText[2]-0.6,font=2,pos=4,cex=legendTextCex)
+  startText <- c((xleft+xright)/2,ytop-2.4)
+  text("Color of symbol",x=startText[1],y=startText[2],font=2,cex=legendTextCex)
+  text("indicates",x=startText[1],y=startText[2]-0.3,font=2,cex=legendTextCex)
+  
+  if(units==1) concText <- expression(bold(paste("concentration (","mg/L)",sep="")))
+  if(units==2) concText <- expression(bold(paste("concentration (",mu,"g/L)",sep="")))
+  if(units==3) concText <- expression(bold(paste("concentration (","ng/L)",sep="")))
+  if(units==4) concText <- expression(bold(paste("concentration (","pg/L)",sep="")))
+  if(units==5) concText <- expression(bold(paste("concentration (","mg/kg)",sep="")))
+  if(units==6) concText <- expression(bold(paste("concentration (",mu,"g/kg)",sep="")))
+  if(units==7) concText <- expression(bold(paste("concentration (","ng/kg)",sep="")))
+  if(units==8) concText <- expression(bold(paste("concentration (","pg/kg)",sep=""))) 
+   
+  text(concText,x=startText[1],y=startText[2]-0.6,font=2,cex=legendTextCex)
   
   legend(x=xleft+0.2,y=ytop-3.,legendText,pt.bg=c("tan",binCol),pch=plotSymbol,bg="white",pt.cex=1.5,bty="n")
 }

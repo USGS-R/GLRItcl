@@ -112,8 +112,7 @@ MapColor <- function(df,colorVar,latVar,lonVar,
   if(units==8) concText <- expression(bold(paste("concentration (","pg/kg)",sep=""))) 
   
   
-  text(concText,x=startText[1],y=startText[2]-0.6,
-       font=2,cex=legendTextCex)
+  text(concText,x=startText[1],y=startText[2]-0.6,font=2,cex=legendTextCex)
 #   text(expression(bold(paste("concentration (",mu,"g/L)",sep=""))),x=startText[1],y=startText[2]-0.6,
 #        font=2,cex=legendTextCex)
   
