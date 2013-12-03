@@ -1,32 +1,23 @@
-\name{MapSizeColor}
-\alias{MapSizeColor}
-\title{Mapping data with variable size and color to define spatial data}
+\name{MapColor}
+\alias{MapColor}
+\title{Mapping data with variable color to define spatial data}
 \usage{
-  MapSizeColor(df, colorVar, sizeVar, latVar, lonVar,
-    sizeThresh1, sizeThresh2, politicalBounds,
+  MapColor(df, colorVar, latVar, lonVar, politicalBounds,
     hydroPolygons, hydroLines, xmin, xmax, ymin, ymax,
     col1 = "tan", col2 = "orange3", col3 = "orangered1",
     col4 = "orangered4", xleft, xright, ytop, ybottom,
     mainTitle = "")
 }
 \arguments{
-  \item{df}{Dataframe with two columns that have data to
-  define symbol size, color, latitude, and longitude of
-  points to be plotted}
+  \item{df}{Dataframe with a column that has data to define
+  symbol color, latitude, and longitude of points to be
+  plotted}
 
   \item{colorVar}{Column name in df to define symbol color}
-
-  \item{sizeVar}{Column name in df to define symbol size}
 
   \item{latVar}{Column name in df to define latitude}
 
   \item{lonVar}{Column name in df to define longitude}
-
-  \item{sizeThresh1}{Low threshold value of sizeVar for
-  defining bins}
-
-  \item{sizeThresh2}{High threshold value of sizeVar for
-  defining bins}
 
   \item{politicalBounds}{Shapefile of class
   "SpatialPolygonsDataFrame" for defining political
@@ -76,17 +67,15 @@
 }
 \description{
   Mapping routine that displays spatial data variability by
-  size and color differences. over layers with political
-  boundaries, hydrologic polygons, and hydrologic lines.
+  color differences. over layers with political boundaries,
+  hydrologic polygons, and hydrologic lines.
 }
 \examples{
 lat.dd <- stationINFO$dec.lat.va
 lon.dd <-  stationINFO$dec.long.va
 y <- runif(n=length(lat.dd),min=0,max=50)
-count <- round(runif(n=length(lat.dd),min=0,max=30),0)
-df <- data.frame(y=y, lat.dd=lat.dd,lon.dd=lon.dd,count=count)
+df <- data.frame(y=y, lat.dd=lat.dd,lon.dd=lon.dd)
 colorVar <- "y"
-sizeVar <- "count"
 latVar <- "lat.dd"
 lonVar <- "lon.dd"
 politicalBounds <- shape_poliboundsClip
@@ -97,22 +86,19 @@ xmax <- -72
 ymin <- 40.5
 ymax <- 49.5
 xleft <- -95
-ybottom <- 40.4
+ybottom <- 40.7
 xright <- -90.8
-ytop <- 45.3
+ytop <- 43.5
 col1 <- "tan"
 col2 <- "orange3"
 col3 <- "orangered1"
 col4 <- "orangered4"
-sizeThresh1 <- 2
-sizeThresh2 <- 14
-mainTitle <- "Colors vary by concentration"
-MapSizeColor(df,colorVar,sizeVar,latVar,lonVar,sizeThresh1,sizeThresh2,
-             politicalBounds,hydroPolygons,hydroLines,
-             xmin,xmax,ymin,ymax,xleft=xleft,xright=xright,ytop=ytop,ybottom=ybottom,mainTitle=mainTitle)
+mainTitle <- "OC Pesticides"
+MapColor(df,colorVar,latVar,lonVar,
+         politicalBounds,hydroPolygons,hydroLines,
+         xmin,xmax,ymin,ymax,xleft=xleft,xright=xright,ytop=ytop,ybottom=ybottom,mainTitle=mainTitle)
 }
 \keyword{color}
 \keyword{map}
-\keyword{size}
 \keyword{spatial}
 
