@@ -84,7 +84,7 @@ MapColor <- function(df,colorVar,latVar,lonVar,
   plot(hydroPolygons,col="lightskyblue2",xlim=c(xmin,xmax),ylim=c(ymin,ymax),add=TRUE)#
   lines(hydroLines,col="lightskyblue2",xlim=c(xmin,xmax),ylim=c(ymin,ymax))#
   plot(politicalBounds,add=TRUE)
-  points(df[,lonVar], df[,latVar],pch=plotSymbol, col="black",bg=fillCol)
+  points(df[,lonVar], df[,latVar],pch=plotSymbol, col="black",bg=fillCol,cex=1.2)
   mtext(mainTitle,side=3,line=-4,outer=TRUE,font=2,cex=1.3)
   
   
