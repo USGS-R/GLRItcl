@@ -10,4 +10,4 @@ This software is provided "AS IS".
 Installation
 ------------
 
-  install.packages("GLRItcl", repos="http://usgs-r.github.com")
+	install.packages("GLRItcl", repos="http://usgs-r.github.com")
