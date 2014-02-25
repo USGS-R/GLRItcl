@@ -1,8 +1,8 @@
 Package: GLRItcl
 Type: Package
 Title: GLRI toxic contaminants
-Version: 1.0.0
-Date: 2013-08-28
+Version: 1.1.0
+Date: 2014-02-25
 Author: Laura De Cicco, Steven Corsi
 Maintainer: Laura De Cicco <ldecicco@usgs.gov>
 Description: GLRI toxic contaminants
@@ -12,28 +12,7 @@ Copyright: This software is in the public domain because it contains materials
     the United States Department of Interior. For more information, see the
     official USGS copyright policy at
     http://www.usgs.gov/visual-id/credit_usgs.html#copyright
-Collate:
-    'GLRI_TCL.R'
-    'getGLRIData.R'
-    'filterGLRIData.R'
-    'wideGLRIData.R'
-    'statClassSummary.R'
-    'PCodeClassSummary.R'
-    'filterBlanks.R'
-    'filterWideDF.R'
-    'sumValuesToUse.R'
-    'createBubbleGraph.R'
-    'statSummary.R'
-    'fxn_PlotPriorities.R'
-    'fxn_MapSizeColor.R'
-    'fxn_MapColor.R'
 Depends:
     R (>= 3.0.0)
-Imports:
-    rgdal,
-    sp
-Suggests:
-    knitr
 LazyLoad: yes
 LazyData: yes
-VignetteBuilder: knitr
