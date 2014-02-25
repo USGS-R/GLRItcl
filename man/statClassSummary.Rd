@@ -2,16 +2,16 @@
 \alias{statClassSummary}
 \title{Calculate and summarize stats on GLRI data}
 \usage{
-  statClassSummary(dataByClass)
+statClassSummary(dataByClass)
 }
 \arguments{
   \item{dataByClass}{data.frame}
 }
 \value{
-  DF dataframe
+DF dataframe
 }
 \description{
-  Filter the raw data into a simple dataframe.
+Filter the raw data into a simple dataframe.
 }
 \examples{
 genericCensoringValue <- function(qualifier,value, detectionLimit){

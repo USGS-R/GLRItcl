@@ -2,16 +2,16 @@
 \alias{statSummary}
 \title{Calculate and summarize stats on GLRI data}
 \usage{
-  statSummary(filteredData)
+statSummary(filteredData)
 }
 \arguments{
   \item{filteredData}{data.frame}
 }
 \value{
-  DF dataframe
+DF dataframe
 }
 \description{
-  Filter the raw data into a simple dataframe.
+Filter the raw data into a simple dataframe.
 }
 \examples{
 genericCensoringValue <- function(qualifier,value, detectionLimit){

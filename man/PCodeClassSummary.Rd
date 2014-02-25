@@ -2,8 +2,7 @@
 \alias{PCodeClassSummary}
 \title{Filter the wide dataframe by parameter code}
 \usage{
-  PCodeClassSummary(wideDF, keyDF, pCodeCol, classCol,
-    merge = TRUE)
+PCodeClassSummary(wideDF, keyDF, pCodeCol, classCol, merge = TRUE)
 }
 \arguments{
   \item{wideDF}{data.frame}
@@ -17,12 +16,12 @@
   \item{merge}{logical}
 }
 \value{
-  DF dataframe
+DF dataframe
 }
 \description{
-  Filter the wide dataframe by parameter code, codes can
-  come in individually as a simple string, or in a
-  character vector
+Filter the wide dataframe by parameter code, codes can come
+in individually as a simple string, or in a character
+vector
 }
 \examples{
 genericCensoringValue <- function(qualifier,value, detectionLimit){

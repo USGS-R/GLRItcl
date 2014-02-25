@@ -2,8 +2,7 @@
 \alias{getGLRIData}
 \title{Get QW data for multiple sites}
 \usage{
-  getGLRIData(siteNumber, startDate, OWC = TRUE,
-    pCodes = NULL)
+getGLRIData(siteNumber, startDate, OWC = TRUE, pCodes = NULL)
 }
 \arguments{
   \item{siteNumber}{string vector of just USGS site ID
@@ -18,10 +17,10 @@
   list}
 }
 \value{
-  dataframe
+dataframe
 }
 \description{
-  Gets the basic data from the water quality portal.
+Gets the basic data from the water quality portal.
 }
 \examples{
 OWCdata <- getGLRIData(c('04010500','04024000'), '2013-01-01',OWC=TRUE)

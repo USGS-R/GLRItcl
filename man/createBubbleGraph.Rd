@@ -2,15 +2,12 @@
 \alias{createBubbleGraph}
 \title{Create overview bubble graph of GLRI data}
 \usage{
-  createBubbleGraph(DF, xCol = "class", yCol = "site",
-    colCol = "max", radCol = "percentDetect",
-    colorTitle = "Maximum Concentration",
-    radiusTitle = "Frequency of detection [\%]",
-    colorScale = c(0.01, 0.1, 1, 10, Inf),
-    radiusScale = c(0, 20, 40, 60, 80, 100),
-    countCol = "count", savePDF = FALSE,
-    fileName = "bubble.pdf", colorGradient = FALSE,
-    radiusGradient = TRUE)
+createBubbleGraph(DF, xCol = "class", yCol = "site", colCol = "max",
+  radCol = "percentDetect", colorTitle = "Maximum Concentration",
+  radiusTitle = "Frequency of detection [\%]", colorScale = c(0.01, 0.1, 1,
+  10, Inf), radiusScale = c(0, 20, 40, 60, 80, 100), countCol = "count",
+  savePDF = FALSE, fileName = "bubble.pdf", colorGradient = FALSE,
+  radiusGradient = TRUE)
 }
 \arguments{
   \item{DF}{data.frame}
@@ -43,11 +40,8 @@
   \item{radiusGradient}{logical use a linear radius
   gradient or discrete radii (number set by radiusScale)}
 }
-\value{
-  NULL
-}
 \description{
-  Create overview bubble graph of GLRI data. Testing Mac.
+Create overview bubble graph of GLRI data. Testing Mac.
 }
 \examples{
 genericCensoringValue <- function(qualifier,value, detectionLimit){

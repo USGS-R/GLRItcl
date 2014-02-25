@@ -2,7 +2,7 @@
 \alias{filterGLRIData}
 \title{Filter the raw data into long dataframe.}
 \usage{
-  filterGLRIData(rawData, valueToUseFunction)
+filterGLRIData(rawData, valueToUseFunction)
 }
 \arguments{
   \item{rawData}{data.frame}
@@ -12,11 +12,11 @@
   valueToUse}
 }
 \value{
-  DF dataframe
+DF dataframe
 }
 \description{
-  Filter the raw data into a simple dataframe. Output
-  dataframe is in long format.
+Filter the raw data into a simple dataframe. Output
+dataframe is in long format.
 }
 \examples{
 genericCensoringValue <- function(qualifier,value, detectionLimit){

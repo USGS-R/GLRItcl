@@ -2,16 +2,16 @@
 \alias{wideGLRIData}
 \title{Convert long GLRI dataframe to wide}
 \usage{
-  wideGLRIData(filteredData)
+wideGLRIData(filteredData)
 }
 \arguments{
   \item{filteredData}{data.frame}
 }
 \value{
-  DF dataframe
+DF dataframe
 }
 \description{
-  Filter the filtered data into a wide format.
+Filter the filtered data into a wide format.
 }
 \examples{
 genericCensoringValue <- function(qualifier,value, detectionLimit){
